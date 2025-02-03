@@ -1,0 +1,208 @@
+/* GERAL */
+html{
+    font-family: 'Montserrat';
+    font-size: 10px;
+    width: 100%;
+    height:100%;
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+}
+
+.backgroundTurquesa{
+    background-color: #02A28F;
+    font-weight: 700;
+    color: #fff;
+}
+
+h1{
+    font-size: 3.6rem;
+    margin:0;
+    padding: 1rem 8rem;
+}
+h2{
+    font-size: 3.2rem;
+    margin:0;
+}
+
+h3{
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 700;
+    padding: 1.2rem 2rem;
+}
+
+h4{
+    font-size: 1.6rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+h5{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+p{
+    font-size: 1.4rem;
+}
+
+.fonteTurquesa{
+    font-size: 1.4rem;
+    color: #02A28F;
+}
+.fonteCinza{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color:#616161
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    margin-left: 14rem;
+    margin-top: 4rem;
+    gap: 2rem;
+}
+.font12{
+    font-size: 1.2rem;
+}
+/* HEADER */
+header{
+    padding-left: 6rem;
+}
+/* PRIMERIA SECTION */
+#presentation{
+    background-image:linear-gradient(transparent, #000), url(imagens/edificio.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    width: 74.4rem;
+    height: 39.6rem;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: left;
+    border-radius: 15px;
+    color:#fff;
+}
+
+#presentationText{
+    margin: 3rem 2rem;
+}
+
+
+/* SEGUNDA SECTION */
+#sidebar{
+    height: 4.8rem;
+    width: 3.6rem;
+}
+
+#sideContentTitle{
+    height: 4.8rem;
+    width: 36rem;
+    border-radius: 1rem;
+}
+/* #sideContentTitle h3{
+    padding-top: 1.2rem;
+    padding-left: 2rem;
+} */
+
+.sideContent{
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top:1.5rem;
+    box-shadow: 5px 4px 10px #6565653d;
+    padding: 1.5rem;
+}
+.sideContent h3{
+    padding: 2rem;
+}
+.sideContent h4{
+    font-weight: 700;
+    margin: 1rem;
+}
+
+.sideContent p{
+    margin: 1rem;
+}
+
+/* TERCEIRA SECTION */
+#feedTitle{
+    width: 74.4rem;
+    height: 5.6rem;
+    display: flex;
+    justify-content: space-between;
+
+    border-radius: 1rem;
+}
+#feedTitle p{
+    margin-top: 1.6rem;
+    margin-right: 2rem;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+#secondSection{
+    display: grid;
+    grid-template-rows: 74rem, repeat(2, 36rem);
+    grid-template-columns:repeat(2, 38rem);
+    gap:0.2rem;
+    margin-top: 1rem;
+}
+.posts{
+    border-radius: 1rem;
+    box-shadow: 5px 4px 10px #6565653d;
+    max-width: 36rem;
+    margin-top: 1rem;
+}
+.posts p, h5{
+    padding-left: 2rem;
+    line-height: 1.8rem;
+}
+
+.item1{
+    grid-area: 2 / 1;
+}
+.item2{
+    grid-area: 2 / 2;
+}
+.item3{
+    grid-area: 3 / 1;
+}
+.item4{
+    grid-area: 3 / 2;
+}
+
+/* QUARTA SEÇÃO */
+#categorias{
+    width: 36rem;
+    height:4.8rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+.lists{
+    display: flex;
+    justify-content: space-between;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    font-size: 1.6rem;
+    color: #616161;
+    font-weight: 600;
+    padding-top: 1rem;
+}
+
+/* FOOTER */
+footer{
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
