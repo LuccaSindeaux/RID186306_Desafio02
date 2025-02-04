@@ -58,7 +58,8 @@ main {
 }
 
 aside {
-    margin-top: 4rem;
+    margin-top: 4.5rem;
+    margin-left: 2rem;
     width: 30vw; 
 }
 
@@ -104,7 +105,7 @@ aside{
 }
 
 #presentationText{
-    margin: 3rem 2rem;
+    padding: 3rem 2rem;
 }
 
 /* SEGUNDA SECTION */
@@ -147,51 +148,54 @@ aside{
     height: 5.6rem;
     display: flex;
     justify-content: space-between;
-
+    margin-top: 2rem;
     border-radius: 1rem;
 }
 #feedTitle p{
-    margin-top: 1.6rem;
-    margin-right: 2rem;
+    padding-top: .3rem;
+    padding-right: 2rem;
     font-weight: 400;
     text-decoration: underline;
 }
-
-#gridContainer{
+#gridContainer {
     display: grid;
-    grid-template-rows: 74rem, repeat(2, 36rem);
-    grid-template-columns:repeat(2, 38rem);
-    gap:0.2rem;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);  /* Usando fr para tornar a largura das colunas flexível */
+    gap: 1.2rem;
     margin-top: 1rem;
 }
 .posts{
     border-radius: 1rem;
-    box-shadow: 5px 4px 10px #6565653d;
-    max-width: 36rem;
-    margin-top: 1rem;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    /* width: 100%; */
+    overflow: hidden;
 }
-.posts p, h5{
-    padding-left: 2rem;
-    line-height: 1.8rem;
+.posts img{
+    width: 100%;
+    height:19.1rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    object-fit: cover;
 }
-
+.posts p, .posts h5 {
+    padding-left: 1rem;
+    padding-right: 1rem; 
+    line-height: 1.5rem;
+}
 .item1{
-    grid-area: 2 / 1;
+    grid-area: 1 / 1;
 }
 .item2{
-    grid-area: 2 / 2;
+    grid-area: 1 / 2;
 }
 .item3{
-    grid-area: 3 / 1;
+    grid-area: 2 / 1;
 }
 .item4{
-    grid-area: 3 / 2;
+    grid-area: 2 / 2;
 }
 
 /* QUARTA SEÇÃO */
-#finalSection{
-    width: 28vw;
-}
 #categorias{
     width: 28vw;
     height:4.8rem;
@@ -223,40 +227,181 @@ footer{
 
 /* MEDIA QUERIE MOBILE */
 @media only screen and (max-width: 767px) {
-    header, footer, section{
-        width: 96vw;
+    header, footer, article{
+        width: 100vw;
+        margin:0;
+    }
+    #head, #foot{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 10vh;
+    }
+    section{
+        padding-left: 0;
+        align-items: center;
     }
     h1{
-        font-size: 2.4rem;
+        font-size: 2rem;
+        text-align: center;
+        padding: 0;
     }
-    .container{
-        margin-left: 1rem;
+    h3{
+        font-size: 1.8rem;
+        padding-top: .2rem;
+    }
+    h5{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 1.4rem;
+    }
+    .greatContainer{
+        margin-left: 0;
+        display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 2%;
+    }
+    aside{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #gridContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    #categorias, #feedTitle,  #sideContentTitle{
+        width: 95vw;
+        margin-top: 4vh;
+    }
+    #head{
+        align-items: center;
+        text-align: center;
     }
     #presentation{
-        justify-content: center;
-        align-items: left;
-        text-align: center;
+        /* margin: 1vh .5vw; */
         width: 96vw;
         height: 39.6rem;
         display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: left;
+    }
+    .titles{
+        width: 95vw;
+        margin: 0 auto;
+    }
+    #presentationText h2{
+        font-size: 2.4rem;
     }
     #gridContainer{
         display: flex;
         flex-direction: column;
         max-width: 96vw;
+        margin-left: 0;
     }
     .posts{
-        width: 96vw;
+        width:98%;
+        margin-top: 1rem;
+    }
+    .posts img {
+        width: 100%; 
+    }
+    .posts p, .posts h5 {
+        line-height: 1.8rem;
+    }
+    .sideContent{
+        width: 95vw;
+        margin: 0 auto;
+    }
+    #firstSideContent{
+        line-height: 1.8rem;;
     }
 }
 
 /* MEDIA QUERIE TABLET */
-@media only screen and (min-width:768px) and (max-width:1023px) {
-    
-}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .greatContainer {
+        flex-direction: column;
+        align-items: center;
+        margin:2rem 1rem 2rem 1rem;
+    }
 
+    main {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    aside {
+        width: 90%;
+        margin-top: 3rem;
+    }
+
+    /* Ajusta o tamanho dos títulos */
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+    }
+
+    p{
+        font-size: 1.6rem;
+    }
+
+    /* Ajusta o container de apresentação */
+    #presentation {
+        width: 94%;
+        height: 38rem;
+    }
+
+    /* Ajusta os posts para melhor exibição */
+    #gridContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-content: center;
+    }
+
+    .posts {
+        width: 100%;
+        max-width: 45vw;
+    }
+
+    .posts img {
+        width: 100%; 
+        height: 19.1rem; 
+        display: block; 
+    }
+
+    /* Ajusta a seção lateral */
+    .sideContent {
+        width: 95%;
+    }
+
+    #categorias,
+    #feedTitle,
+    #sideContentTitle {
+        width: 98%;
+        margin-top: 2rem;
+    }
+
+    /* Ajusta o footer */
+    footer {
+        margin-top: 4rem;
+        padding: 1rem 0;
+        text-align: center;
+    }
+}
 /* MEDIA QUERIE ULTRAWIDE */
-@media (min-aspect-ratio: 2/1) {
+@media only screen and (min-width: 1920px){
     
 }
