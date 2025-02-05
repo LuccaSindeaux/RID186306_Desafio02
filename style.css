@@ -291,7 +291,7 @@ footer{
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        align-items: left;
+        align-items: flex-start;
     }
     .titles{
         width: 95vw;
@@ -359,8 +359,13 @@ footer{
 
     /* Ajusta o container de apresentação */
     #presentation {
-        width: 94%;
+        width: 96vw;
         height: 38rem;
+    }
+    .container {
+    max-width: 1600px; /* Mantém a leitura confortável */
+    margin: 0 auto;
+    padding: 1rem;
     }
 
     /* Ajusta os posts para melhor exibição */
@@ -387,9 +392,7 @@ footer{
         width: 95%;
     }
 
-    #categorias,
-    #feedTitle,
-    #sideContentTitle {
+    #categorias, #feedTitle, #sideContentTitle {
         width: 98%;
         margin-top: 2rem;
     }
@@ -402,6 +405,70 @@ footer{
     }
 }
 /* MEDIA QUERIE ULTRAWIDE */
-@media only screen and (min-width: 1920px){
+@media only screen and (min-width: 1700px){
+    html{
+        font-size: 20px;
+    }
+    #presentation,  #feedTitle{
+        width: 64em;
+    }
+    .greatContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 4rem 5%;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        width: 90vw; 
+        margin: 0 auto;
+        padding: 1rem;
+    }
     
+    main{
+        flex: 7;
+        width: 70vw;
+    }
+    aside{
+        flex: 3;
+        margin-top:1rem;
+        width: 30vw;
+    }
+    .sideContent{
+        width: 100%;
+    }
+    h4{
+        font-size: 1.3rem;
+    }
+    #gridContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 30em); /* Cria 4 colunas adaptáveis */
+        grid-template-rows: repeat(2, 50em);
+        gap: 3em; /* Adiciona espaçamento maior entre os posts */
+        width: 64em;
+        margin: 2rem 0;
+    }
+    .posts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 5px 4px 10px rgba(101, 101, 101, 0.24);
+    }
+    .posts img {
+        width: 100%;
+        height: auto; 
+        max-height: 25rem;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        object-fit: cover;
+    }
+    footer {
+        margin-top: 4rem;
+        padding: 2rem 0;
+        text-align: center;
+        font-size: 1.4rem;
+    }
 }
