@@ -169,6 +169,7 @@ aside{
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
     /* width: 100%; */
     overflow: hidden;
+    padding-top: 1rem;
 }
 .posts img{
     width: 100%;
@@ -181,6 +182,7 @@ aside{
     padding-left: 1rem;
     padding-right: 1rem; 
     line-height: 1.5rem;
+    margin: 1.2rem auto;
 }
 .item1{
     grid-area: 1 / 1;
@@ -423,7 +425,7 @@ footer{
         justify-content: space-between;
         width: 90vw; 
         margin: 0 auto;
-        padding: 1rem;
+        padding: 1rem .5rem;
     }
     
     main{
@@ -440,6 +442,9 @@ footer{
     }
     h4{
         font-size: 1.3rem;
+    }
+    h5{
+        font-size: 1.8rem;
     }
     #gridContainer {
         display: grid;
@@ -458,12 +463,15 @@ footer{
         box-shadow: 5px 4px 10px rgba(101, 101, 101, 0.24);
     }
     .posts img {
-        width: 100%;
-        height: auto; 
+        width: 104%;
+        height: 30%; 
         max-height: 25rem;
         border-top-left-radius: 1rem;
         border-top-right-radius: 1rem;
         object-fit: cover;
+    }
+    .posts p{
+        margin: 1rem 1rem;
     }
     footer {
         margin-top: 4rem;
