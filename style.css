@@ -1,3 +1,6 @@
+/* *{
+    overflow-x: hidden;
+} */
 html{
     font-family: 'Montserrat';
     font-size: 10px;
@@ -58,7 +61,7 @@ main {
 }
 
 aside {
-    margin-top: 4.5rem;
+    margin-top: 4rem;
     margin-left: 2rem;
     width: 30vw; 
 }
@@ -75,18 +78,10 @@ aside {
 header{
     padding-left: 6rem;
 }
-/* main{
-    float: left;
-}
-aside{
-    max-width: 25vw;
-    float: right;
-    margin:4rem 6rem 1rem 6rem ;
-} */
 .container{
     display: flex;
     flex-direction: column;
-    margin: 4rem 0 1rem 4rem;
+    margin: 4rem 0 1rem 1.5rem;
 }
 /* PRIMERIA SECTION */
 #presentation{
@@ -95,7 +90,7 @@ aside{
     background-repeat: no-repeat;
     border-radius: 1rem;
     width: 74.4rem;
-    height: 36rem;
+    height: 39rem;
 
     display: flex;
     flex-direction: column;
@@ -110,8 +105,7 @@ aside{
 
 /* SEGUNDA SECTION */
 #sidebar{
-    height: 4.8rem;
-    width: 3.6rem;
+    margin-bottom: 4.8rem;
 }
 
 #sideContentTitle{
@@ -142,6 +136,9 @@ aside{
 .sideContent p{
     margin: 1rem;
 }
+.font12{
+    margin-top: 2rem;
+}
 /* TERCEIRA SECTION */
 #feedTitle{
     width: 74.4rem;
@@ -163,6 +160,7 @@ aside{
     grid-template-columns: repeat(2, 1fr);  /* Usando fr para tornar a largura das colunas flexível */
     gap: 1.2rem;
     margin-top: 1rem;
+    width: 96%;
 }
 .posts{
     border-radius: 1rem;
@@ -202,14 +200,17 @@ aside{
     width: 28vw;
     height:4.8rem;
     border-radius: 1rem;
-    margin-top: 1rem;
 }
 .lists{
     display: flex;
-    justify-content: space-between;
+    justify-content: row;
 }
 ul{
     list-style-type: none;
+    padding-left: 0;
+}
+#subLists{
+    flex: 1;
 }
 li{
     font-size: 1.6rem;
@@ -227,17 +228,14 @@ footer{
 }
 
 
-/* MEDIA QUERIE MOBILE */
+/* MEDIA QUERY MOBILE */
 @media only screen and (max-width: 767px) {
-    header, footer, article{
-        width: 100vw;
-        margin:0;
-    }
     #head, #foot{
         display: flex;
         align-items: center;
-        justify-content: center;
-        height: 10vh;
+        justify-content: left;
+        height: 20vh;
+        width: 100vw;
     }
     section{
         padding-left: 0;
@@ -249,8 +247,8 @@ footer{
         padding: 0;
     }
     h3{
-        font-size: 1.8rem;
-        padding-top: .2rem;
+        font-size: 1.6rem;
+        padding: 1.2rem 2rem .1rem 2rem;
     }
     h5{
         font-size: 2rem;
@@ -327,12 +325,21 @@ footer{
     }
 }
 
-/* MEDIA QUERIE TABLET */
+/* MEDIA QUERY TABLET */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .greatContainer {
         flex-direction: column;
         align-items: center;
-        margin:2rem 1rem 2rem 1rem;
+        margin:2rem;
+        width: 94vw;
+    }
+    header{
+        padding: 0;
+    }
+    #head{
+        width:100vw;
+        align-items: center;
+        justify-content: left;
     }
 
     main {
@@ -341,11 +348,9 @@ footer{
     }
 
     aside {
-        width: 90%;
+        width: 98%;
         margin-top: 3rem;
     }
-
-    /* Ajusta o tamanho dos títulos */
     h1 {
         font-size: 3rem;
         text-align: center;
@@ -358,100 +363,93 @@ footer{
     p{
         font-size: 1.6rem;
     }
-
-    /* Ajusta o container de apresentação */
     #presentation {
-        width: 96vw;
+        width: 96%;
         height: 38rem;
     }
     .container {
-    max-width: 1600px; /* Mantém a leitura confortável */
-    margin: 0 auto;
-    padding: 1rem;
+        margin: 0 2rem;
+        padding: 1rem;
     }
-
-    /* Ajusta os posts para melhor exibição */
     #gridContainer {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         justify-content: center;
+        width: 96%;
     }
 
     .posts {
         width: 100%;
-        max-width: 45vw;
     }
-
+    .posts p, .posts h5{
+        line-height: 1.5;
+    }
     .posts img {
         width: 100%; 
-        height: 19.1rem; 
+        height: 40%; 
         display: block; 
     }
-
-    /* Ajusta a seção lateral */
     .sideContent {
-        width: 95%;
+        width: 97.5%;
     }
-
     #categorias, #feedTitle, #sideContentTitle {
-        width: 98%;
+        width: 96%;
         margin-top: 2rem;
     }
+    .lists{
+        display: flex;
+        flex-direction: row;
+        gap: 0;
 
-    /* Ajusta o footer */
+    }
     footer {
         margin-top: 4rem;
         padding: 1rem 0;
         text-align: center;
+        width: 100vw;
     }
 }
-/* MEDIA QUERIE ULTRAWIDE */
-@media only screen and (min-width: 1700px){
-    html{
-        font-size: 20px;
-    }
-    #presentation,  #feedTitle{
-        width: 64em;
-    }
+
+/* MEDIA QUERIY ULTRAWIDE */
+@media only screen and (min-width: 1441px) and (max-width: 2560px){
     .greatContainer{
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin: 4rem 5%;
+        margin: 4rem 1.2rem;
     }
     .container {
-        display: flex;
-        justify-content: space-between;
-        width: 90vw; 
-        margin: 0 auto;
-        padding: 1rem .5rem;
-    }
-    
-    main{
-        flex: 7;
-        width: 70vw;
+        margin: 0 1rem;
     }
     aside{
-        flex: 3;
         margin-top:1rem;
-        width: 30vw;
     }
-    .sideContent{
-        width: 100%;
+    #presentation, #feedTitle{
+        width: 95%;
+    }
+    #presentation{
+        height: 40rem;
+    }
+    h3{
+        font-size: 2.2rem;
     }
     h4{
-        font-size: 1.3rem;
+        font-size: 2rem;
     }
     h5{
+        font-size: 2.5rem;
+        line-height: 1.5;
+    }
+    p{
         font-size: 1.8rem;
     }
     #gridContainer {
         display: grid;
-        grid-template-columns: repeat(2, 30em); /* Cria 4 colunas adaptáveis */
-        grid-template-rows: repeat(2, 50em);
-        gap: 3em; /* Adiciona espaçamento maior entre os posts */
-        width: 64em;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 50%);
+        gap: 3em; 
+        width: 91%;
         margin: 2rem 0;
     }
     .posts {
@@ -463,20 +461,29 @@ footer{
         box-shadow: 5px 4px 10px rgba(101, 101, 101, 0.24);
     }
     .posts img {
-        width: 104%;
-        height: 30%; 
+        height: 50%; 
+        transform: scale(1.1, 1.1);
         max-height: 25rem;
         border-top-left-radius: 1rem;
         border-top-right-radius: 1rem;
-        object-fit: cover;
+        padding: 0;
+    }
+    .posts h5{
+        line-height: 1.1;
+        margin: 1rem;
+    }
+    .fonteTurquesa{
+        padding-top: 1.5rem;
     }
     .posts p{
+        font-size: 2.1rem;
+        line-height: 1.5;
         margin: 1rem 1rem;
     }
     footer {
         margin-top: 4rem;
         padding: 2rem 0;
         text-align: center;
-        font-size: 1.4rem;
+        font-size: 1.8rem;
     }
 }
